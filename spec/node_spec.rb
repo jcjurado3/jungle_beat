@@ -17,18 +17,21 @@ RSpec.describe Node do
     expect(list.head).to eq(nil)
   end
 
- it 'testing for the append method' do
+ it 'testing for append, count, and to string methods' do
   # Set up below
+
   list = LinkedList.new
-  # Assertion below
   list.append("doop")
-  require 'pry'; binding.pry
+  # Assertion below
+
+
   expect(list.head.data).to eq("doop")
   expect(list.head.next_node).to eq(nil)
   expect(list.count).to eq(1)
 
   expect(list.to_string).to eq("doop")
  end
+
 
  
 end
