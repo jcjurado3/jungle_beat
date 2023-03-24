@@ -1,0 +1,1 @@
+So you linked_list class will have append, count, to_string, prepend, insert, find, includes?, and pop methodsSo you linked_list class will have append, count, to_string, prepend, insert, find, includes?, and pop methods
