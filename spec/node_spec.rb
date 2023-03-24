@@ -31,7 +31,16 @@ RSpec.describe Node do
 
   expect(list.to_string).to eq("doop")
  end
+ it 'testing for multiple nodes' do
+  list = LinkedList.new
+  list.append("doop")
+  expect(list).to be_a(LinkedList)
+  list.append("deep")
+  expect(list.count).to eq(2)
+  expect(list.to_string).to eq("doop deep")
 
+
+ end
 
  
 end
