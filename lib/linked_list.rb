@@ -98,20 +98,20 @@ class LinkedList
     if @head == nil
       return
     elsif @head.next_node.nil?
-      element_to_return = @head.data
+      data_to_return = @head.data
       @head = nil
-      element_to_return
+      data_to_return
     else
-      get_rid_of_last_element
+      remove_last_data
     end
   end
-  def get_rid_of_last_element
+  def remove_last_data
     current_node = @head
     until current_node.next_node.next_node.nil?
       current_node = current_node.next_node
     end
-    element_to_return = current_node.next_node.data
+    data_to_return = current_node.next_node.data
     current_node.next_node = nil           
-    element_to_return
+    data_to_return
   end
 end
