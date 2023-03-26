@@ -38,9 +38,41 @@ RSpec.describe Node do
   list.append("deep")
   expect(list.count).to eq(2)
   expect(list.to_string).to eq("doop deep")
-
-
  end
+ it 'testing for prepend method' do
+  list = LinkedList.new
+  list.append("plop")
+  # testing append
+  expect(list.head.data).to eq("plop")
+  list.append("suu")
+  list.prepend("dop")
 
+  expect(list.to_string).to eq("dop plop suu")
+ end
  
+ it 'testing for insert method' do
+  list = LinkedList.new
+  list.append("plop")
+  list.append("suu")
+  list.prepend("dop")
+  list.insert(1, "woo")
+  expect(list.to_string).to eq("dop woo plop suu")
+ end
+ it 'testing for find, pop and includes? methods' do
+  list = LinkedList.new
+  list.append("deep")
+  list.append("woo")
+  list.append("shi")
+  list.append("shu")
+  list.append("blop")
+
+  expect(list.to_string).to eq("deep woo shi shu blop")
+  expect(list.find(2,1 )).to eq("shi")
+  expect(list.find(1, 3)).to eq("woo shi shu")
+  expect(list.includes?("deep")).to be(true)
+
+  list.pop
+  list.pop
+  expect(list.to_string).to eq("deep woo shi")
+ end
 end
