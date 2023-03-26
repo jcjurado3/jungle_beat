@@ -1,6 +1,7 @@
 require 'rspec'
 require "./lib/node"
 require "./lib/linked_list"
+require "./lib/jungle_beat"
 
 RSpec.describe Node do
 
@@ -74,5 +75,22 @@ RSpec.describe Node do
   list.pop
   list.pop
   expect(list.to_string).to eq("deep woo shi")
+ end
+
+ it 'creates the JungleBeat Linked List "Wrapper" class' do
+
+  jb = JungleBeat.new
+
+
+  expect(jb.list).to be_a(LinkedList)
+  expect(jb.list.head).to eq(nil)
+
+  jb.append("deep doo ditt")
+  expect(jb.list.head.data).to eq("deep")
+  expect(jb.list.head.next_node.data).to eq("doo")
+
+  jb.append("woo hoo shu")
+  expect(jb.count).to eq(6)
+
  end
 end
