@@ -100,4 +100,11 @@ RSpec.describe Node do
   # expect(jb.list.count).to eq(6)
   expect(jb.play).to eq("")
  end
+ it 'creates the all method' do
+  jb = JungleBeat.new("deep")
+  jb.append("Mississippi")
+
+  expect(jb.all).to eq("Mississippi")
+
+ end
 end

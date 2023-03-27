@@ -4,7 +4,7 @@ class JungleBeat
 
   attr_reader :list, :data
 
-  def initialize
+  def initialize(data = nil)
     @list = LinkedList.new
   end
 
@@ -19,6 +19,9 @@ class JungleBeat
   end
   def play
     `say -r 15 -v Cellos #{list.to_string}`
+  end
+  def all
+    list.to_string
   end
 
 end
