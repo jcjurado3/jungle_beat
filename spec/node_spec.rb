@@ -107,4 +107,12 @@ RSpec.describe Node do
   expect(jb.all).to eq("Mississippi")
 
  end
+ it 'creates the rate method' do
+
+  jb = JungleBeat.new
+  jb.append("deep dop dop deep")
+  jb.rate = 100
+
+  expect(jb.play).to eq("")
+ end
 end
