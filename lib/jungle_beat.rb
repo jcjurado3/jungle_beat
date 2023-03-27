@@ -17,5 +17,8 @@ class JungleBeat
   def count
     list.count
   end
+  def play
+    `say -r 15 -v Cellos #{list.to_string}`
+  end
 
 end

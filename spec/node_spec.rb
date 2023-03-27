@@ -91,6 +91,13 @@ RSpec.describe Node do
 
   jb.append("woo hoo shu")
   expect(jb.count).to eq(6)
+ end
 
+ it 'creates the play method' do
+  jb = JungleBeat.new
+  jb.append("deep doo ditt woo hoo shu")
+  # expect(jb.count).to eq(6)
+  # expect(jb.list.count).to eq(6)
+  expect(jb.play).to eq("")
  end
 end
