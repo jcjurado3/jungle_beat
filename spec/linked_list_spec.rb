@@ -19,7 +19,7 @@ RSpec.describe LinkedList do
     expect(list.head.next_node).to eq(nil)
     expect(list.count).to eq(1)
     expect(list.to_string).to eq("doop")
- end
+  end
 
   it 'testing for multiple nodes' do
     list = LinkedList.new
@@ -31,7 +31,7 @@ RSpec.describe LinkedList do
 
     expect(list.count).to eq(2)
     expect(list.to_string).to eq("doop deep")
- end
+  end
 
   it 'testing the prepend method' do
 
@@ -45,38 +45,38 @@ RSpec.describe LinkedList do
 
     expect(list.to_string).to eq("dop plop suu")
     expect(list.count).to eq(3)
- end
+  end
  
- it 'testing for insert method' do
-  list = LinkedList.new
-  list.append("plop")
-  list.append("suu")
-  list.prepend("dop")
-  list.insert(1, "woo")
+  it 'testing for insert method' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "woo")
 
-  expect(list.to_string).to eq("dop woo plop suu")
- end
+    expect(list.to_string).to eq("dop woo plop suu")
+  end
 
- it 'testing for find, pop and includes? methods' do
-  list = LinkedList.new
-  list.append("deep")
-  list.append("woo")
-  list.append("shi")
-  list.append("shu")
-  list.append("blop")
+  it 'testing for find, pop and includes? methods' do
+    list = LinkedList.new
+    list.append("deep")
+    list.append("woo")
+    list.append("shi")
+    list.append("shu")
+    list.append("blop")
 
-  expect(list.to_string).to eq("deep woo shi shu blop")
+    expect(list.to_string).to eq("deep woo shi shu blop")
 
-  expect(list.find(2,1 )).to eq("shi")
-  expect(list.find(1, 3)).to eq("woo shi shu")
+    expect(list.find(2,1 )).to eq("shi")
+    expect(list.find(1, 3)).to eq("woo shi shu")
 
-  expect(list.includes?("deep")).to be(true)
-  expect(list.includes?("dep")).to be(false)
+    expect(list.includes?("deep")).to be(true)
+    expect(list.includes?("dep")).to be(false)
 
-  list.pop
-  list.pop
+    list.pop
+    list.pop
 
-  expect(list.to_string).to eq("deep woo shi")
- end
+    expect(list.to_string).to eq("deep woo shi")
+  end
 
 end
