@@ -14,6 +14,7 @@ RSpec.describe JungleBeat do
     expect(jb.list.head).to eq(nil)
   
     jb.append("deep doo ditt")
+
     expect(jb.list.head.data).to eq("deep")
     expect(jb.list.head.next_node.data).to eq("doo")
   
@@ -25,6 +26,7 @@ RSpec.describe JungleBeat do
    it 'creates the play method' do
     jb = JungleBeat.new
     jb.append("deep doo ditt woo hoo shu")
+    
     expect(jb.count).to eq(6)
     expect(jb.list.count).to eq(6)
     expect(jb.play).to eq("")
