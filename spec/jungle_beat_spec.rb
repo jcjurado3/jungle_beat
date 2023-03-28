@@ -5,7 +5,7 @@ require "./lib/jungle_beat"
 
 RSpec.describe JungleBeat do
 
-  it 'creates the JungleBeat Linked List "Wrapper" class' do
+  it 'creates the JungleBeat class with new append method' do
 
     jb = JungleBeat.new
   
@@ -18,6 +18,7 @@ RSpec.describe JungleBeat do
     expect(jb.list.head.next_node.data).to eq("doo")
   
     jb.append("woo hoo shu")
+
     expect(jb.count).to eq(6)
    end
   
@@ -30,9 +31,9 @@ RSpec.describe JungleBeat do
    end
 
    it 'creates the all method' do
-    jb = JungleBeat.new("deep")
+   jb = JungleBeat.new
     jb.append("Mississippi")
-  
+
     expect(jb.all).to eq("Mississippi")
   
    end
@@ -41,7 +42,7 @@ RSpec.describe JungleBeat do
   
     jb = JungleBeat.new
     jb.append("deep dop dop deep")
-    jb.rate = 100
+    jb.rate = 50
   
     expect(jb.play).to eq("")
    end
@@ -50,6 +51,17 @@ RSpec.describe JungleBeat do
     jb.append("deep dop dop deep")
     jb.rate = 50
     jb.voice = "Bubbles"
+
+    expect(jb.play).to eq("")
+   end
+
+   it 'tests the reset methods for Play and Voices' do
+    jb = JungleBeat.new
+    jb.append("deep dop dop deep")
+    jb.rate = 50
+    jb.voice = "Bubbles"
+    jb.reset_rate
+    jb.reset_voice
 
     expect(jb.play).to eq("")
    end

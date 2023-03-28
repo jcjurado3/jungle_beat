@@ -3,14 +3,11 @@ class LinkedList
   def initialize
     @head = head
   end
-  # This is an if statement that checks whether the instance variable @head is nil. 
-  # If @head is nil, it means that the linked list is currently empty, 
-  # so a new node containing data is created and set as the @head of the list. 
-  # If @head is not nil, it means that the list already contains at least one node, 
-  # so the make_current_node method is called to add a new node to the end of the list.
+
   def append(data)
     if @head == nil
-    @head = Node.new(data)
+      @head = Node.new(data)
+      @head.data
     else
       make_current_node(data)
     end

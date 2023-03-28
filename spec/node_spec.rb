@@ -5,7 +5,7 @@ require "./lib/jungle_beat"
 
 RSpec.describe Node do
 
-  it 'testing for data and next node attributes' do
+  it 'testing for head data and next node attributes' do
     node = Node.new("plop")
 
     expect(node.data).to eq("plop")
