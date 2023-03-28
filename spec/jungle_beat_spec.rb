@@ -67,4 +67,5 @@ RSpec.describe JungleBeat do
 
     expect(jb.play).to eq("")
   end
+
 end
