@@ -8,12 +8,18 @@ class JungleBeat
   def initialize(data = nil)
     @list = LinkedList.new
     @rate = 500
-    @voice = "Good News"
+    @voice = "Boing"
   end
 
   def append(data)
     data.split.each do |sound|
       list.append(sound)
+    end
+    data
+  end
+  def prepend(data)
+    data.split.each do |sound|
+      list.prepend(sound)
     end
     data
   end

@@ -39,6 +39,12 @@ RSpec.describe JungleBeat do
     expect(jb.all).to eq("Mississippi")
   
   end
+  it 'tests for the prepend method' do
+    jb = JungleBeat.new
+    jb.append("tee tee tee Mississippi")
+
+    expect(jb.all).to eq("tee tee tee Mississippi")
+  end
 
   it 'creates the rate method' do
   
