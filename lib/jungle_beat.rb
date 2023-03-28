@@ -7,8 +7,8 @@ class JungleBeat
 
   def initialize(data = nil)
     @list = LinkedList.new
-    @rate = rate
-    @voice = voice
+    @rate = 500
+    @voice = "Good News"
   end
 
   def append(data)
@@ -26,10 +26,10 @@ class JungleBeat
   def all
     list.to_string
   end
-  def rate_default
+  def reset_rate
     @rate = 500
   end
-  def voice_default
+  def reset_voice
     @voice = "Good News"
   end
 end
