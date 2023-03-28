@@ -30,9 +30,9 @@ RSpec.describe JungleBeat do
    end
 
    it 'creates the all method' do
-    jb = JungleBeat.new("deep")
+   jb = JungleBeat.new
     jb.append("Mississippi")
-  
+
     expect(jb.all).to eq("Mississippi")
   
    end
