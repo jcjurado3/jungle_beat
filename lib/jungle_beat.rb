@@ -13,17 +13,21 @@ class JungleBeat
 
   def append(data)
     accepted_data = "tee dee deep bop boop la na dop
-    woo"
+    woo deep doo ditt woo hoo shu"
     data.split(" ").each do |sound|
       if accepted_data.include?(sound)
-        @list.append(sound)
+        list.append(sound)
       end
     end
     data
   end
   def prepend(data)
-    data.split.each do |sound|
-      list.prepend(sound)
+    accepted_data = "tee dee deep bop boop la na dop
+    woo deep doo ditt woo hoo shu"
+    data.split(" ").each do |sound|
+      if accepted_data.include?(sound)
+        list.prepend(sound)
+      end
     end
     data
   end

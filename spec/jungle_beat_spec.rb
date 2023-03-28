@@ -34,9 +34,9 @@ RSpec.describe JungleBeat do
 
   it 'creates the all method' do
     jb = JungleBeat.new
-    jb.append("Mississippi")
+    jb.append("deep doo ditt")
 
-    expect(jb.all).to eq("Mississippi")
+    expect(jb.all).to eq("deep doo ditt")
   
   end
   it 'tests the validation inside the append and prepend methods' do
@@ -45,15 +45,16 @@ RSpec.describe JungleBeat do
 
     expect(jb.list.head).to eq(nil)
 
-    
+    jb.prepend("Mississippi")
 
+    expect(jb.list.head).to eq(nil)
 
   end
   it 'tests for the prepend method' do
     jb = JungleBeat.new
     jb.append("tee tee tee Mississippi")
 
-    expect(jb.all).to eq("tee tee tee Mississippi")
+    expect(jb.all).to eq("tee tee tee")
   end
 
   it 'creates the rate method' do
