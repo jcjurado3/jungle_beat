@@ -118,7 +118,7 @@ class LinkedList
   end
   def remove_last_data
     current_node = @head
-    until current_node.next_node.next_node.nil?
+    while current_node.next_node.next_node != nil
       current_node = current_node.next_node
     end
     data_to_return = current_node.next_node.data
