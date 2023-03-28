@@ -39,6 +39,16 @@ RSpec.describe JungleBeat do
     expect(jb.all).to eq("Mississippi")
   
   end
+  it 'tests the validation inside the append and prepend methods' do
+    jb = JungleBeat.new
+    jb.append("Mississippi")
+
+    expect(jb.list.head).to eq(nil)
+
+    
+
+
+  end
   it 'tests for the prepend method' do
     jb = JungleBeat.new
     jb.append("tee tee tee Mississippi")

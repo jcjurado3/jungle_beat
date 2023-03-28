@@ -12,8 +12,12 @@ class JungleBeat
   end
 
   def append(data)
-    data.split.each do |sound|
-      list.append(sound)
+    accepted_data = "tee dee deep bop boop la na dop
+    woo"
+    data.split(" ").each do |sound|
+      if accepted_data.include?(sound)
+        @list.append(sound)
+      end
     end
     data
   end
@@ -30,7 +34,7 @@ class JungleBeat
     `say -r #{@rate} -v #{@voice} #{list.to_string}`
   end
   def all
-    list.to_string
+    @list.to_string
   end
   def reset_rate
     @rate = 500
