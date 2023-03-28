@@ -11,12 +11,9 @@ RSpec.describe LinkedList do
   end
 
  it 'testing for append, count, and to string methods' do
-  # Set up below
 
   list = LinkedList.new
   list.append("doop")
-  # Assertion below
-
 
   expect(list.head.data).to eq("doop")
   expect(list.head.next_node).to eq(nil)
@@ -40,7 +37,7 @@ RSpec.describe LinkedList do
 
   list = LinkedList.new
   list.append("plop")
-  # testing append
+
   expect(list.head.data).to eq("plop")
 
   list.append("suu")
@@ -69,16 +66,16 @@ RSpec.describe LinkedList do
   list.append("blop")
 
   expect(list.to_string).to eq("deep woo shi shu blop")
-  # Testing find method below
+
   expect(list.find(2,1 )).to eq("shi")
   expect(list.find(1, 3)).to eq("woo shi shu")
-  # Testing the include? method below
+
   expect(list.includes?("deep")).to be(true)
   expect(list.includes?("dep")).to be(false)
 
   list.pop
   list.pop
-  # Testing for the pop method below
+
   expect(list.to_string).to eq("deep woo shi")
  end
 
