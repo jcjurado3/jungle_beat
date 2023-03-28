@@ -54,4 +54,15 @@ RSpec.describe JungleBeat do
 
     expect(jb.play).to eq("")
    end
+
+   it 'tests the reset methods for Play and Voices' do
+    jb = JungleBeat.new
+    jb.append("deep dop dop deep")
+    jb.rate = 50
+    jb.voice = "Bubbles"
+    jb.reset_rate
+    jb.reset_voice
+
+    expect(jb.play).to eq("")
+   end
 end

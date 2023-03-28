@@ -30,6 +30,6 @@ class JungleBeat
     @rate = 500
   end
   def reset_voice
-    @voice = "Good News"
+    @voice = "Boing"
   end
 end
