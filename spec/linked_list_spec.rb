@@ -78,5 +78,12 @@ RSpec.describe LinkedList do
 
     expect(list.to_string).to eq("deep woo shi")
   end
+  it 'tests for edge cases on insert' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.insert(6, "woo")
+    expect(list.insert(6, "woo")).to eq("That doesn't work")
+  end
 
 end
