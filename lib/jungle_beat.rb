@@ -2,11 +2,13 @@ require './lib/linked_list'
 
 class JungleBeat
 
-  attr_reader :list, :data
+  attr_reader :list
+  attr_accessor :rate, :voice
 
-  def initialize(data = nil, rate = 500)
+  def initialize(data = nil)
     @list = LinkedList.new
     @rate = rate
+    @voice = voice
   end
 
   def append(data)
@@ -19,11 +21,15 @@ class JungleBeat
     list.count
   end
   def play
-    `say -r 15 -v Cellos #{list.to_string}`
+    `say -r #{@rate} -v #{@voice} #{list.to_string}`
   end
   def all
     list.to_string
   end
-
-
+  def rate_default
+    @rate = 500
+  end
+  def voice_default
+    @voice = "Good News"
+  end
 end

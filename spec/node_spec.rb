@@ -115,4 +115,11 @@ RSpec.describe Node do
 
   expect(jb.play).to eq("")
  end
+ it 'creates the voice method' do
+  jb = JungleBeat.new
+  jb.append("deep dop dop deep")
+  jb.rate = 50
+  jb.voice = "Daniel"
+  expect(jb.play).to eq("")
+ end
 end
