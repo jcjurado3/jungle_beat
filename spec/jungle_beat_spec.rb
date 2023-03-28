@@ -21,43 +21,43 @@ RSpec.describe JungleBeat do
     jb.append("woo hoo shu")
 
     expect(jb.count).to eq(6)
-   end
+  end
   
-   it 'creates the play method' do
+  it 'creates the play method' do
     jb = JungleBeat.new
     jb.append("deep doo ditt woo hoo shu")
     
     expect(jb.count).to eq(6)
     expect(jb.list.count).to eq(6)
     expect(jb.play).to eq("")
-   end
+  end
 
-   it 'creates the all method' do
-   jb = JungleBeat.new
+  it 'creates the all method' do
+    jb = JungleBeat.new
     jb.append("Mississippi")
 
     expect(jb.all).to eq("Mississippi")
   
-   end
+  end
 
-   it 'creates the rate method' do
+  it 'creates the rate method' do
   
     jb = JungleBeat.new
     jb.append("deep dop dop deep")
     jb.rate = 50
   
     expect(jb.play).to eq("")
-   end
-   it 'creates the voice method' do
+  end
+  it 'creates the voice method' do
     jb = JungleBeat.new
     jb.append("deep dop dop deep")
     jb.rate = 50
     jb.voice = "Bubbles"
 
     expect(jb.play).to eq("")
-   end
+  end
 
-   it 'tests the reset methods for Play and Voices' do
+  it 'tests the reset methods for Play and Voices' do
     jb = JungleBeat.new
     jb.append("deep dop dop deep")
     jb.rate = 50
@@ -66,5 +66,5 @@ RSpec.describe JungleBeat do
     jb.reset_voice
 
     expect(jb.play).to eq("")
-   end
+  end
 end
