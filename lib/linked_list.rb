@@ -35,10 +35,7 @@ class LinkedList
     end
     string
   end
-  # make_current_node adds a new node to the end of a linked list 
-  # by iterating through the list until it reaches the last node, 
-  # and then setting the next_node of that node to a new 
-  # node containing the provided data.
+
   def make_current_node(data)
     current_node = @head
     until current_node.next_node.nil?
@@ -55,9 +52,7 @@ class LinkedList
       @head.next_node = local_head
     end
   end
-  # this method inserts a new node into the linked list at the specified position, 
-  # provided that the position is valid. It traverses the linked list to find 
-  # the correct position, and then inserts the new node into the list.
+  
   def insert(position, data)
     if position > count
       "That doesn't work"
